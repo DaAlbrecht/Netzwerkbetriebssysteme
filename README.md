@@ -3,6 +3,8 @@
 ## Requirements
 
 - docker
+- nodejs (at least 16)
+- no active postgres-service running
 
 ## Run
 
@@ -41,3 +43,13 @@ Servers -> Register -> Server -> Connection
 ![connection string](pictures/connection.PNG "Connection overview")
 
 use the credentials mentioned in the PostgreSQL section
+
+### Webapp
+
+```
+cd /db-demo/
+npm install
+npx prisma generate
+npx prisma studio
+npx prisma db push
+```
